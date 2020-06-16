@@ -1,0 +1,256 @@
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0px 0px 6px 0px;
+  margin: 0;
+  color: ;
+  line-height: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 0px 6px 0px;
+  margin: 0;
+  color: ;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+}
+
+p {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sort-by ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sort-by li {
+  margin: 15px 15px;
+  padding: 5px 8px 4px 8px;
+  border: 1px solid black;
+  box-shadow: 6px 6px rgb(0, 0, 0);
+  background-color: white;
+}
+
+.icon-container {
+  margin: 15px 21px 15px 15px;
+  transform: translateY(6px) translateX(6px);
+}
+
+.icon-layer-1 {
+  border: 1px solid black;
+  /*box-shadow: 6px 6px rgb(0, 0, 0);*/
+  height: 60px;
+  width: 40px;
+  transform: translateY(0px) translateX(0px);
+  background-color: white;
+}
+
+.icon-layer-2 {
+  border: 1px solid black;
+  height: 60px;
+  width: 40px;
+  transform: translateY(-4px) translateX(-4px);
+  background-color: white;
+}
+
+.icon-layer-3 {
+  border: 1px solid black;
+  height: 60px;
+  width: 40px;
+  transform: translateY(-5px) translateX(-5px);
+  background-color: white;
+}
+
+.icon-container:hover .icon-layer-3 {
+  transform: rotate(-6deg) translate(-15px, -15px);
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 48px;
+}
+
+.all-cards-container {
+  /*border: 1px solid black;*/
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+  .all-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .all-cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-container {
+  /*border: 1px solid black;*/
+  height: 360px;
+  width: 270px;
+  margin: 48px;
+}
+
+.card-container:nth-child(5n-4) .card {
+  transform: rotate(-6deg) translate(-37px, -37px);
+}
+
+.card-container:nth-child(5n-3) .card {
+  transform: rotate(-2deg) translate(-37px, -37px);
+}
+
+.card-container:nth-child(5n-2) .card {
+  transform: rotate(5deg) translate(-37px, -37px);
+}
+
+.card-container:nth-child(5n-1) .card {
+  transform: rotate(0deg) translate(-37px, -37px);
+}
+
+.card-container:nth-child(5n) .card {
+  transform: rotate(8deg) translate(-50px, -37px);
+}
+
+.card-container:hover {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px) rotate(0deg);
+  }
+}
+
+.card {
+  border: 0.5px solid black;
+  height: 320px;
+  width: 240px;
+  margin: 36px 36px;
+  box-shadow: 6px 6px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.card-back {
+  height: 308px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.card-back-specs {
+  margin: 0px 5px 5px 45px;
+}
+
+/*.card li p:before {
+  content: "+";
+  font-weight: bold;
+  padding: 0px 4px 0px 0px;
+}*/
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.card-front-1 {
+  background-image: url("https://images.collection.cooperhewitt.org/43818_d309dd60a6c9b228_b.jpg");
+  filter: brightness(105%);
+}
+
+.card-front-2 {
+  background-image: url("https://images.collection.cooperhewitt.org/49341_e80862327dbaa624_b.jpg");
+}
+
+.card-front-5 {
+  background-image: url("https://images.collection.cooperhewitt.org/21566_ac77712a565c65d3_b.jpg");
+  filter: brightness(100%);
+}
+
+/*.card-front-3,
+.card-front-4,
+.card-front-5,
+.card-front-6,
+.card-front-7,
+.card-front-8,
+.card-front-9,
+.card-front-10,
+.card-front-11,
+.card-front-12,
+.card-front-13,
+.card-front-14,
+.card-front-15,
+.card-front-16,
+.card-front-17,
+.card-front-18,
+.card-front-19,
+.card-front-20,
+.card-front-21,
+.card-front-22,
+.card-front-23,
+.card-front-24,
+.card-front-25,
+.card-front-26 {
+  display: none;
+}*/
